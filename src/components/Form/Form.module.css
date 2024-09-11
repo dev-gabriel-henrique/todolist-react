@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  transform: translateY(-1.8rem);
+
+  margin-bottom: 2.2rem;
+
+  & input {
+    width: 50%;
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-700);
+
+    font: 400 1rem/ 1.4 var(--inter);
+    color: var(--gray-100);
+
+    &::placeholder {
+      color: var(--gray-300);
+    }
+  }
+
+  & button {
+    background-color: var(--blue-500);
+    border: 0;
+    border-radius: 0.5rem;
+
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font: 800 0.875rem/1.4 var(--inter);
+    color: var(--gray-100);
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--blue-300);
+    }
+  }
+}

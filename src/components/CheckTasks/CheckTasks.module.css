@@ -1,0 +1,61 @@
+.checkTasks {
+  width: 48rem;
+  padding: 1rem;
+
+  border: 1px solid var(--gray-400);
+  border-radius: .5rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--gray-500);
+
+  & .check { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+
+
+    & p {
+      font: 400 .875rem/1.4 var(--inter);
+
+    }
+  }
+
+  & button {
+    background: transparent;
+    
+    border: none;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    &:hover {
+      background-color: var(--gray-400);
+       & svg path {
+        fill: var(--danger);
+       }
+    }
+  }
+}
+
+.checked {
+  color: var(--purple-500);
+  text-decoration: line-through;
+  text-decoration-color: var(--purple-500);
+}
+
+.unchecked {
+  text-decoration: none;
+  color: var(--gray-100);
+}
