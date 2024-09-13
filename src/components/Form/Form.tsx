@@ -1,34 +1,16 @@
-import styles from './Form.module.css';
+import styles from "./Form.module.css";
 
 import plus from "../../assets/plus.svg";
-import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
-import { List } from '../List/List';
+import { ChangeEvent, InvalidEvent, useState } from "react";
 
-export interface ITaskType {
-  isChecked?: boolean;
-  content: string;
-  onDeletetask?: (task: string) => {};
-  id: number;
-}
-interface ITaskProp {
-  task?: ITaskType;
+export interface IFormType {
+  onSubmit: (value: string) => void;
 }
 
-export function Form({ task }: ITaskProp) {
-  const [tasks, setTasks] = useState(["Academia todo dia!"]);
+export function Form({ onSubmit }: IFormType) {
+  const [newTask, setNewTask] = useState<string>("");
 
-  const [newTask, setNewTask] = useState("");
-
-  function handleCreateNewTask(event: FormEvent) {
-    event.preventDefault();
-
-    setTasks([...tasks, newTask]);
-    setNewTask("");
-  }
-
-  function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
-    event.target.setCustomValidity("");
-
+  function handleNewTask(event: ChangeEvent<HTMLInputElement>) {
     setNewTask(event.target.value);
   }
 
@@ -40,25 +22,28 @@ export function Form({ task }: ITaskProp) {
 
   return (
     <div>
-    <form onSubmit={handleCreateNewTask} className={styles.form}>
-      <input
-        type="text"
-        id="task"
-        name="task"
-        placeholder="Adicione uma nova tarefa"
-        value={newTask}
-        onChange={handleNewTaskChange}
-        onInvalid={handleNewTaskInvalid}
-        required
-      />
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          onSubmit(newTask);
+        }}
+        className={styles.form}
+      >
+        <input
+          type="text"
+          id="task"
+          name="task"
+          placeholder="Adicione uma nova tarefa"
+          value={newTask}
+          onChange={handleNewTask}
+          onInvalid={handleNewTaskInvalid}
+          required
+        />
 
-      <button type="submit" disabled={isNewTaskEmpty}>
-        Criar <img src={plus} alt="icone de mais" />
-      </button>
-    </form>
-
-    <List 
-    />
+        <button type="submit" disabled={isNewTaskEmpty}>
+          Criar <img src={plus} alt="icone de mais" />
+        </button>
+      </form>
     </div>
   );
 }
