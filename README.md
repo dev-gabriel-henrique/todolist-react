@@ -24,5 +24,5 @@ Neste projeto foi utilizado:
 - React (Framework para controle de componentes e facilitação na estrutura do site);
 - UseState (Para controlar o estados do componente);
 - Vite (Ferramenta usada para facilitar a criação de apps).
-- Javascript (Usado para inteligencia do site, usando algoritimos);
+- Javascript (Usado para inteligencia do site, usando algoritmos);
 - Typescript (Usado para tipagens);
