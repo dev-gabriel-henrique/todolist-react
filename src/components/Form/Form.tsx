@@ -12,6 +12,8 @@ export function Form({ onSubmit }: IFormType) {
 
   function handleNewTask(event: ChangeEvent<HTMLInputElement>) {
     setNewTask(event.target.value);
+
+    return event.target.focus()
   }
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLInputElement>) {
