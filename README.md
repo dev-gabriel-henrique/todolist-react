@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+# <div align="center"> TO DO LIST &nbsp;&nbsp; <br><br> ![logo ToDoList](./src/assets/todo.svg) </div> #
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center"> Este app foi feito como forma de desafio da Rocketseat para praticar tudo que foi aprendido no modulo de React  do curso de especiaçização para ReactJS. 
+<br>
+<br>
 
-Currently, two official plugins are available:
+  [Projeto](#-projeto) &nbsp; | &nbsp; [Aprendizados](#-aprendizado) &nbsp; | &nbsp; [Tecnologias](#-tecnologias) &nbsp;
+  </div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![imagem da tela inicial do site](./src/assets/Cover.png)
+<br>
+<br>
+<br>
 
-## Expanding the ESLint configuration
+## 🚀 PROJETO
+ O *To Do List* é um aplicativo que registra suas tarefas diárias, deleta e checka quais estão completas;
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📚 APRENDIZADO
+Neste projeto pude utilizar e aprender novas técnicas e novos códigos para trabalhar nos projetos, alem de ampliar conhecimentos em algorítmos e estados de evento;
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 TECNOLOGIAS
+Neste projeto foi utilizado:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- React (Framework para controle de componentes e facilitação na estrutura do site);
+- UseState (Para controlar o estados do componente);
+- Vite (Ferramenta usada para facilitar a criação de apps).
+- Javascript (Usado para inteligencia do site, usando algoritimos);
+- Typescript (Usado para tipagens);
