@@ -26,6 +26,8 @@ export function Form({ onSubmit }: IFormType) {
         onSubmit={(event) => {
           event.preventDefault();
           onSubmit(newTask);
+
+          setNewTask("")
         }}
         className={styles.form}
       >
@@ -40,7 +42,9 @@ export function Form({ onSubmit }: IFormType) {
           required
         />
 
-        <button type="submit" disabled={isNewTaskEmpty}>
+        <button 
+        type="submit"
+        disabled={isNewTaskEmpty}>
           Criar <img src={plus} alt="icone de mais" />
         </button>
       </form>

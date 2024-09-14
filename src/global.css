@@ -21,6 +21,7 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -ms-font-smoothing: grayscale;
+  transition: all .4s ease-in-out;
 }
 
 body {

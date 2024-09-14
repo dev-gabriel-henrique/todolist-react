@@ -1,11 +1,32 @@
-.wrapper {
-  max-width: 80rem;
-  padding-inline: 1rem;
-  
+.task {
+  width: 50%;
+  margin: 1.5rem auto 0;
+
   display: grid;
-  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+
+  & .background {
+    display: none;
+  }
+
 }
+
+.noTasks {
+  width: 50%;
+
+  margin: 1.5rem auto 0;
+  padding: 3rem 1.5rem;
+
+  border-top: 1px solid var(--gray-400);
+  border-radius: .5rem;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media (max-width: 768px) {
   html {

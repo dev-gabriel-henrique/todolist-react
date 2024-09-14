@@ -44,5 +44,10 @@
     &:hover {
       background-color: var(--blue-300);
     }
+
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
   }
 }

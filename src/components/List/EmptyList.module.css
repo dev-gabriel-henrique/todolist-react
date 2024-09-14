@@ -1,0 +1,21 @@
+.background {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  & img {
+    margin: 0 auto 1rem;
+  }
+
+  & h2 {
+    font: 800 1rem/1.4 var(--inter);
+    color: var(--gray-300);
+  }
+
+  & p {
+    font: 400 1rem/1.4 var(--inter);
+    color: var(--gray-300);
+  }
+}

@@ -4,25 +4,34 @@ import styles from "./CheckTasks.module.css"
 import { Checkbox } from "./Checkbox/Checkbox"
 
 interface ITasksTypes {
-  onDeleteTask: (task: string) => void;
+  isTaskChecked: boolean;
+  content: string;
+  onDeleteTask: () => void;
+  onTaskCompleted: () => void;
 }
 
-export function CheckTasks({onDeleteTask}: ITasksTypes) {
+export function CheckTasks({isTaskChecked, content, onDeleteTask, onTaskCompleted}: ITasksTypes) {
   const [checked, setChecked] = useState<boolean>(false);
+
+  const handleToggle = () => {
+    setChecked(!checked)
+    onTaskCompleted()
+  }
 
   return (
     <div className={styles.checkTasks}>
       <div className={styles.check}>
           <Checkbox 
-          isChecked={checked}
-          onClick={setChecked}/>
+          isChecked={isTaskChecked = checked}
+          onClick={handleToggle}/>
         <p 
         className={`${checked ? styles.checked : styles.unchecked}`}>
-          Comer comida
+          {content}
         </p>
       </div>
 
-      <button>
+      <button
+      onClick={onDeleteTask}>
         <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.20214 4.98547H6.87158V10.5073H8.20214V4.98547Z" fill="#808080" />
           <path d="M5.46239 4.98547H4.13184V10.5073H5.46239V4.98547Z" fill="#808080" />
