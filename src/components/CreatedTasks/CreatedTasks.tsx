@@ -2,7 +2,7 @@ import styles from "./CreatedTasks.module.css"
 
 interface ICreatedTasks {
   numberOfTasks: number;
-  numberOfTasksCompleted?: number;
+  numberOfTasksCompleted?: number | string;
 }
 
 export function CreatedTasks({numberOfTasks = 0, numberOfTasksCompleted = 0}: ICreatedTasks) {
@@ -16,7 +16,7 @@ export function CreatedTasks({numberOfTasks = 0, numberOfTasksCompleted = 0}: IC
 
     <div className={styles.completedTasks}>
       <p>
-        Concluídas <span>{numberOfTasksCompleted}</span>
+        Concluídas <span>{numberOfTasksCompleted === 0 ? numberOfTasksCompleted : `${numberOfTasksCompleted} de ${numberOfTasks}`}</span>
       </p>
     </div>
   </header>
